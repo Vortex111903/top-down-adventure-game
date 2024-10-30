@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door 1
+  - Acorn
+  - Twig
   layers:
   - Default
   - TransparentFX

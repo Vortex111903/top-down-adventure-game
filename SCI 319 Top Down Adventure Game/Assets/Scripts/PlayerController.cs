@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private SpriteRenderer sr;
-    
+    public bool hasAcorn = false;
+    public bool hasTwig = false;
+
     public Sprite upSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
@@ -50,7 +52,15 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
-    }
+        if (collision.gameObject.tag.Equals("Acorn"))
+        {
+            hasAcorn = true;
+        }
+        if (collision.gameObject.tag.Equals("Twig"))
+        {
+            hasTwig = true;
+        }
+    }   
 }
 
 
