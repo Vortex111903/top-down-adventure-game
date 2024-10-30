@@ -60,6 +60,10 @@ public class PlayerController : MonoBehaviour
         {
             hasTwig = true;
         }
+        if (collision.gameObject.tag.Equals("Door 2") && hasTwig == true && hasAcorn == true)
+        {
+            SceneManager.LoadScene(3);
+        }
     }   
 }
 
