@@ -46,7 +46,10 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision) 
     {
-        
+        if (collision.gameObject.tag.Equals("Door 1")) 
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
 
