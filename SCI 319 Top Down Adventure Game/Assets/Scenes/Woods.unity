@@ -1216,6 +1216,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7510028719569101595, guid: 0592ad1539b1ce049ad84368a085f16a, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510028719569101595, guid: 0592ad1539b1ce049ad84368a085f16a, type: 3}
       propertyPath: soundEffects
       value: 
       objectReference: {fileID: 1335492281}
@@ -1223,6 +1227,10 @@ PrefabInstance:
       propertyPath: soundEffects2
       value: 
       objectReference: {fileID: 78455795}
+    - target: {fileID: 8274371724402928715, guid: 0592ad1539b1ce049ad84368a085f16a, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8931305662057322100, guid: 0592ad1539b1ce049ad84368a085f16a, type: 3}
       propertyPath: m_Name
       value: Player Variant
