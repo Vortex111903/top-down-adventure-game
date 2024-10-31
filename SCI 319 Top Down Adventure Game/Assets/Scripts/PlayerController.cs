@@ -14,10 +14,17 @@ public class PlayerController : MonoBehaviour
     public Sprite leftSprite;
     public Sprite rightSprite;
     public Sprite frontSprite;
+
+   public AudioSource soundEffects;
+   public AudioSource soundEffects2;
+    //public AudioClip doorOpen;
+    //public AudioClip itemCollect;
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+ soundEffects = GetComponent<AudioSource>();
+        soundEffects2 = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,26 +59,33 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Door 1")) 
         {
             SceneManager.LoadScene(2);
+          soundEffects2.Play();
         }
         if (collision.gameObject.tag.Equals("Acorn"))
         {
             hasAcorn = true;
+          soundEffects.Play();
         }
         if (collision.gameObject.tag.Equals("Twig"))
         {
             hasTwig = true;
+            soundEffects.Play();
         }
         if (collision.gameObject.tag.Equals("Door 2") && hasTwig == true && hasAcorn == true)
         {
             SceneManager.LoadScene(3);
+           soundEffects2.Play();
         }
         if (collision.gameObject.tag.Equals("Key"))
         {
             hasKey = true;
+            soundEffects.Play();
+
         }
         if (collision.gameObject.tag.Equals("Exit") && hasKey == true )
         {
             SceneManager.LoadScene(4);
+            soundEffects2.Play();
         }
     }   
 }
