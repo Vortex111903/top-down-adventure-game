@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Last Area.unity
     guid: 59bdd7b133aede84ba48727dfa0d4a69
+  - enabled: 1
+    path: Assets/Scenes/The End.unity
+    guid: 58884a30558644e4ab6c4bf2f5ee6725
   m_configObjects: {}
