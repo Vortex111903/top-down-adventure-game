@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
     public bool hasAcorn = false;
     public bool hasTwig = false;
+    public bool hasKey = false;
 
     public Sprite upSprite;
     public Sprite leftSprite;
@@ -63,6 +64,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Door 2") && hasTwig == true && hasAcorn == true)
         {
             SceneManager.LoadScene(3);
+        }
+        if (collision.gameObject.tag.Equals("Key"))
+        {
+            hasKey = true;
+        }
+        if (collision.gameObject.tag.Equals("Exit") && hasKey == true )
+        {
+            SceneManager.LoadScene(4);
         }
     }   
 }
